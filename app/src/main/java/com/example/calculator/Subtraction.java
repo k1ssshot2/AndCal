@@ -34,7 +34,7 @@ public class Subtraction extends AppCompatActivity {
         edit2 = (EditText) findViewById(R.id.num2);
         textresult = (TextView)findViewById(R.id.textResult);
 
-        btnsub.setOnClickListener(new View.OnClickListener() {
+        btnsub.setOnClickListener(new View.OnClickListener() { //빼기 버튼
             @Override
             public void onClick(View view) {
                 num1 = edit1.getText().toString();
@@ -43,7 +43,7 @@ public class Subtraction extends AppCompatActivity {
                 textresult.setText("결과 : " + result);
             }
         });
-        btnback.setOnClickListener(new View.OnClickListener() {
+        btnback.setOnClickListener(new View.OnClickListener() { // 뒤로가기 버튼
             @Override
             public void onClick(View view) {
                 Log.d("Subtraction", "btnSub clicked"); // 클릭 확인용

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("MainActivity", "btnSub found"); // 추가!
         }
 
-        btnsub.setOnClickListener(new View.OnClickListener() {
+        btnsub.setOnClickListener(new View.OnClickListener() { //빼기 액티비티로 GO
             @Override
             public void onClick(View view) {
                 Log.d("MainActivity", "btnSub clicked"); // 클릭 확인용
