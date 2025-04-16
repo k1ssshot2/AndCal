@@ -17,26 +17,26 @@ import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button  btnMul;
-
+    Button btnMul;
     Button btnsub;
     Button btnAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("계산기");
 
+        btnAdd = findViewById(R.id.btnAdd);
+        btnsub = findViewById(R.id.btnSub);
         btnMul = findViewById(R.id.btnMul);
 
         btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MultiplyActivity.class);
-
-        setTitle("계산기");
-
-        Button btnAdd = findViewById(R.id.btnAdd);
-        Button btnsub = findViewById(R.id.btnSub);
+                startActivity(intent);
+            }
+        });
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
