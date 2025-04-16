@@ -17,14 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("계산기");
 
-        Log.d("MainActivity", "onCreate called"); // 추가!
+        Button btnAdd = findViewById(R.id.btnAdd);
 
-        btnsub = (Button) findViewById(R.id.btnSub);
-        if (btnsub == null) {
-            Log.e("MainActivity", "btnSub is NULL!"); // 추가!
-        } else {
-            Log.d("MainActivity", "btnSub found"); // 추가!
-        }
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AdditionActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnsub.setOnClickListener(new View.OnClickListener() { //빼기 액티비티로 GO
             @Override
