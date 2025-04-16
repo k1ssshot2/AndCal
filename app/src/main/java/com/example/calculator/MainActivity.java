@@ -11,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnsub;
+    Button btnAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle("계산기");
 
         Button btnAdd = findViewById(R.id.btnAdd);
+        Button btnsub = findViewById(R.id.btnSub);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
