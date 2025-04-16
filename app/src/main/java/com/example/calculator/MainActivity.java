@@ -17,19 +17,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("계산기");
 
-        btnsub.setOnClickListener(new View.OnClickListener() { //빼기 액티비티로 GO
+        Button btnAdd = findViewById(R.id.btnAdd);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Subtraction.class);
+                Intent intent = new Intent(MainActivity.this, AdditionActivity.class);
                 startActivity(intent);
             }
         });
 
-        //더하기
-
-        //나누기
-
-        //곱셈
+        btnsub.setOnClickListener(new View.OnClickListener() { //빼기 액티비티로 GO
+            @Override
+            public void onClick(View view) {
+                Log.d("MainActivity", "btnSub clicked"); // 클릭 확인용
+                Intent intent = new Intent(MainActivity.this, Subtraction.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
